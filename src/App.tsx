@@ -1,9 +1,10 @@
-const App: React.FC = () => {
+import { AppProviders } from './providers/AppProviders';
+import { AppRouter } from './providers/AppRouter';
+
+export const App: React.FC = () => {
   return (
-    <div>
-      <h1>React Sneakers</h1>
-    </div>
+    <AppProviders>
+      <AppRouter />
+    </AppProviders>
   );
 };
-
-export default App;
