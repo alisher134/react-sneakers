@@ -3,4 +3,8 @@ export const ROUTES = {
     route: '/',
     page: '/',
   },
+  favorites: {
+    route: '/favorites',
+    page: '/favorites',
+  },
 };

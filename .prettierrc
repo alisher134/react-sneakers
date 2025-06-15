@@ -9,6 +9,7 @@
   "importOrder": [
     "<THIRD_PARTY_MODULES>",
     "^@/api/(.*)$",
+    "^@/assets/(.*)$",
     "^@/components/(.*)$",
     "^@/providers/(.*)$",
     "^@/pages/(.*)$",

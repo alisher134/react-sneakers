@@ -5,9 +5,11 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
 }
 
 body {
   background: $bg-primary;
-  font-family: 'Inter', sans-serif;
+  color: $black;
+  font-weight: 400;
 }

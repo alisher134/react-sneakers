@@ -1,0 +1,15 @@
+@use '@/styles/variables' as *;
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $layout-padding;
+  border-top: 1px solid $gray-border;
+
+  &__brand,
+  &__copyright {
+    font-size: 14px;
+    color: $gray-text;
+  }
+}
