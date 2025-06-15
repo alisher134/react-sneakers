@@ -1,7 +1,9 @@
 {
   "name": "react-sneakers",
+  "description": "React Sneakers — современный интернет-магазин кроссовок",
+  "author": "Alisher Rakhmanov <alisherrakhmanov134@gmail.com>",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
