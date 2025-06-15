@@ -1,0 +1,25 @@
+.cart-drawer {
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+  }
+
+  &__close {
+    cursor: pointer;
+    background: none;
+    border: none;
+  }
+
+  &__icon {
+    display: block;
+    width: 28px;
+    height: 28px;
+  }
+}
