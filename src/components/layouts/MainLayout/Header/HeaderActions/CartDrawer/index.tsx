@@ -2,6 +2,7 @@ import { X } from 'lucide-react';
 
 import { Drawer } from '@/components/ui/Drawer';
 
+import { CartDrawerEmpty } from './CartDrawerEmpty';
 import styles from './cart-drawer.module.scss';
 
 interface Props {
@@ -19,6 +20,8 @@ export const CartDrawer: React.FC<Props> = ({ isOpen, onClose }) => {
             <X className={styles['cart-drawer__icon']} />
           </button>
         </div>
+
+        <CartDrawerEmpty onClose={onClose} />
       </div>
     </Drawer>
   );
