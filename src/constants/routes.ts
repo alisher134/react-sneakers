@@ -4,7 +4,15 @@ export const ROUTES = {
     page: '/',
   },
   favorites: {
-    route: '/favorites',
+    route: 'favorites',
     page: '/favorites',
+  },
+  login: {
+    route: 'login',
+    page: '/login',
+  },
+  register: {
+    route: 'register',
+    page: '/register',
   },
 };

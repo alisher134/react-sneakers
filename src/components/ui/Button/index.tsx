@@ -9,7 +9,7 @@ type ButtonType = React.ButtonHTMLAttributes<HTMLButtonElement> &
 interface Props extends ButtonType {
   children: React.ReactNode;
   asLink?: boolean;
-  size?: 'small' | 'medium' | 'full';
+  size?: 'small' | 'medium' | 'lg' | 'full';
   variant?: 'primary' | 'secondary' | 'outline';
   preffix?: React.ReactNode;
   suffix?: React.ReactNode;

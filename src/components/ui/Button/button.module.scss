@@ -2,6 +2,7 @@
 
 .button {
   cursor: pointer;
+  display: block;
   text-decoration: none;
   border: none;
   font-size: 16px;
@@ -53,6 +54,10 @@
 
   &.medium {
     padding: 12px 40px;
+  }
+
+  &.lg {
+    padding: 15px 80px;
   }
 
   &.full {
