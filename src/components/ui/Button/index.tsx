@@ -10,6 +10,7 @@ interface Props extends ButtonType {
   children: React.ReactNode;
   asLink?: boolean;
   size?: 'small' | 'medium' | 'full';
+  variant?: 'primary' | 'secondary' | 'outline';
   preffix?: React.ReactNode;
   suffix?: React.ReactNode;
   className?: string;
@@ -18,6 +19,7 @@ interface Props extends ButtonType {
 export const Button: React.FC<Props> = ({
   children,
   size = 'medium',
+  variant = 'primary',
   asLink = false,
   preffix,
   suffix,
@@ -27,7 +29,7 @@ export const Button: React.FC<Props> = ({
   const Component = asLink ? 'a' : 'button';
 
   return (
-    <Component className={clsx(styles.button, styles[size], className)} {...props}>
+    <Component className={clsx(styles.button, styles[size], styles[variant], className)} {...props}>
       <div className={styles.button__container}>
         <span className={styles.button__preffix}>{preffix}</span>
         {children}
