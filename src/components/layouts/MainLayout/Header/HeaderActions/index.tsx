@@ -1,52 +1,37 @@
-import clsx from 'clsx';
 import { CircleUser, Heart, ShoppingCart } from 'lucide-react';
-import { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
 
 import { ROUTES } from '@/constants/routes';
 
-import { useAuth } from '@/hooks/useAuth';
-
 import { CartDrawer } from './CartDrawer';
+import { HeaderActionItem } from './HeaderActionItem';
 import styles from './header-actions.module.scss';
+import { useHeaderActions } from './useHeaderActions';
 
 export const HeaderActions: React.FC = () => {
-  const [isOpenCart, setIsOpenCart] = useState<boolean>(false);
+	const { isOpenCart, setIsOpenCart, handleProfile } = useHeaderActions();
 
-  const { isAuth } = useAuth();
-  const navigate = useNavigate();
+	return (
+		<div className={styles['header-actions']}>
+			<HeaderActionItem
+				icon={<ShoppingCart className={styles['header-actions__icon']} />}
+				label="1205 ₸"
+				onClick={() => setIsOpenCart(true)}
+			/>
 
-  const handleProfile = () => {
-    if (!isAuth) navigate(ROUTES.auth.login.page);
-  };
+			{isOpenCart && <CartDrawer isOpen={isOpenCart} onClose={() => setIsOpenCart(false)} />}
 
-  return (
-    <div className={styles['header-actions']}>
-      <button
-        className={clsx(styles['header-actions__item'], styles['header-actions__button'])}
-        onClick={() => setIsOpenCart(true)}
-      >
-        <ShoppingCart className={styles['header-actions__icon']} />
-        <span className={styles['header-actions__text']}>1205 ₸</span>
-      </button>
+			<HeaderActionItem
+				icon={<Heart className={styles['header-actions__icon']} />}
+				label="Закладки"
+				to={ROUTES.favorites.page}
+				as="link"
+			/>
 
-      {isOpenCart && <CartDrawer isOpen={isOpenCart} onClose={() => setIsOpenCart(false)} />}
-
-      <Link
-        className={clsx(styles['header-actions__item'], styles['header-actions__link'])}
-        to={ROUTES.favorites.page}
-      >
-        <Heart className={styles['header-actions__icon']} />
-        <span className={styles['header-actions__text']}>Закладки</span>
-      </Link>
-
-      <button
-        className={clsx(styles['header-actions__item'], styles['header-actions__button'])}
-        onClick={handleProfile}
-      >
-        <CircleUser className={styles['header-actions__icon']} />
-        <span className={styles['header-actions__text']}>Профиль</span>
-      </button>
-    </div>
-  );
+			<HeaderActionItem
+				icon={<CircleUser className={styles['header-actions__icon']} />}
+				label="Профиль"
+				onClick={handleProfile}
+			/>
+		</div>
+	);
 };

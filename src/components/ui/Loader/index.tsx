@@ -4,9 +4,9 @@ import { LoaderIcon } from 'lucide-react';
 import styles from './loader.module.scss';
 
 interface Props {
-  className?: string;
+	className?: string;
 }
 
 export const Loader: React.FC<Props> = ({ className }) => {
-  return <LoaderIcon className={clsx(styles.loader, className)} />;
+	return <LoaderIcon className={clsx(styles.loader, className)} />;
 };

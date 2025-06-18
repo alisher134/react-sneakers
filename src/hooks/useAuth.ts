@@ -1,9 +1,11 @@
-import cookies from 'js-cookie';
+import { ACCESS_TOKEN } from '@/constants/cookie';
+
+import { getCookie } from '@/utils/cookies';
 
 export const useAuth = () => {
-  const accessToken = cookies.get('accessToken');
+	const accessToken = getCookie(ACCESS_TOKEN);
 
-  return {
-    isAuth: !!accessToken,
-  };
+	return {
+		isAuth: !!accessToken,
+	};
 };

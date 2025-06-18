@@ -1,4 +1,5 @@
-export interface LoginFormValues {
-  email: string;
-  password: string;
-}
+import type { z } from 'zod';
+
+import type { LoginSchema } from './loginSchema';
+
+export type LoginFormValues = z.infer<typeof LoginSchema>;

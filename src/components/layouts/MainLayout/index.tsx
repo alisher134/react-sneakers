@@ -7,17 +7,17 @@ import { Header } from './Header';
 import styles from './main-layout.module.scss';
 
 export const MainLayout: React.FC = () => {
-  return (
-    <main className={styles.wrapper}>
-      <AutoScrollToTop>
-        <Header />
+	return (
+		<main className={styles.wrapper}>
+			<AutoScrollToTop>
+				<Header />
 
-        <div className={styles.content}>
-          <Outlet />
-        </div>
+				<div className={styles.content}>
+					<Outlet />
+				</div>
 
-        <Footer />
-      </AutoScrollToTop>
-    </main>
-  );
+				<Footer />
+			</AutoScrollToTop>
+		</main>
+	);
 };
