@@ -1,0 +1,41 @@
+@use '@/styles/variables' as *;
+
+.register-form {
+  &__label {
+    display: inline-block;
+    width: 100%;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 118.8%;
+    color: #737373;
+    margin: 0 0 9px;
+  }
+
+  &__input {
+    margin-bottom: 20px;
+  }
+
+  &__actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  &__line {
+    width: 100%;
+    border-bottom: 2px solid $gray-border;
+    padding-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  &__login {
+    &-title {
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 32px;
+      font-weight: 500;
+      padding-bottom: 15px;
+    }
+  }
+}

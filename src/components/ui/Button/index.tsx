@@ -1,6 +1,8 @@
 import clsx from 'clsx';
 import type React from 'react';
 
+import { Loader } from '../Loader';
+
 import styles from './button.module.scss';
 
 type ButtonType = React.ButtonHTMLAttributes<HTMLButtonElement> &
@@ -14,6 +16,7 @@ interface Props extends ButtonType {
   preffix?: React.ReactNode;
   suffix?: React.ReactNode;
   className?: string;
+  isLoading?: boolean;
 }
 
 export const Button: React.FC<Props> = ({
@@ -21,12 +24,27 @@ export const Button: React.FC<Props> = ({
   size = 'medium',
   variant = 'primary',
   asLink = false,
+  isLoading = false,
   preffix,
   suffix,
   className,
   ...props
 }) => {
   const Component = asLink ? 'a' : 'button';
+
+  if (isLoading) {
+    return (
+      <Component
+        className={clsx(styles.button, styles[size], styles[variant], styles.isLoading, className)}
+        disabled
+        {...props}
+      >
+        <div className={styles.button__container}>
+          <Loader />
+        </div>
+      </Component>
+    );
+  }
 
   return (
     <Component className={clsx(styles.button, styles[size], styles[variant], className)} {...props}>

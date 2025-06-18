@@ -14,8 +14,8 @@ export const AppRouter: React.FC = () => {
       <Routes>
         <Route element={<MainLayout />}>
           <Route index element={<HomePage />} />
-          <Route path={ROUTES.login.route} element={<LoginPage />} />
-          <Route path={ROUTES.register.route} element={<RegisterPage />} />
+          <Route path={ROUTES.auth.login.route} element={<LoginPage />} />
+          <Route path={ROUTES.auth.register.route} element={<RegisterPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

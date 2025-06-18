@@ -7,12 +7,18 @@ export const ROUTES = {
     route: 'favorites',
     page: '/favorites',
   },
-  login: {
-    route: 'login',
-    page: '/login',
-  },
-  register: {
-    route: 'register',
-    page: '/register',
+  auth: {
+    login: {
+      route: 'login',
+      page: '/login',
+    },
+    register: {
+      route: 'register',
+      page: '/register',
+    },
+    forgot_password: {
+      route: 'forgot-password',
+      page: '/forgot-password',
+    },
   },
 };

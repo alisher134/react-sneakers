@@ -17,7 +17,7 @@ export const HeaderActions: React.FC = () => {
   const navigate = useNavigate();
 
   const handleProfile = () => {
-    if (!isAuth) navigate(ROUTES.login.page);
+    if (!isAuth) navigate(ROUTES.auth.login.page);
   };
 
   return (
