@@ -37,6 +37,26 @@ export const RegisterForm: React.FC = () => {
 				className={styles['register-form__input']}
 			/>
 
+			<label htmlFor="firstName" className={styles['register-form__label']}>
+				Введите ваш имя
+			</label>
+			<Input
+				{...registerInput('firstName')}
+				id="firstName"
+				error={errors.firstName}
+				className={styles['register-form__input']}
+			/>
+
+			<label htmlFor="lastName" className={styles['register-form__label']}>
+				Введите ваш фамилия
+			</label>
+			<Input
+				{...registerInput('lastName')}
+				id="lastName"
+				error={errors.lastName}
+				className={styles['register-form__input']}
+			/>
+
 			<label htmlFor="password" className={styles['register-form__label']}>
 				Введите ваш пароль
 			</label>
