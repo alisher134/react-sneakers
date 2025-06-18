@@ -1,14 +1,14 @@
 .login {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 80vh;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	min-height: 70vh;
 
-  &__title {
-    text-transform: uppercase;
-    font-size: 32px;
-    font-weight: 500;
-    padding-bottom: 15px;
-  }
+	&__title {
+		text-transform: uppercase;
+		font-size: 32px;
+		font-weight: 500;
+		padding-bottom: 15px;
+	}
 }

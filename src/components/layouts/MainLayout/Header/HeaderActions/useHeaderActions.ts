@@ -13,6 +13,7 @@ export const useHeaderActions = () => {
 
 	const handleProfile = () => {
 		if (!isAuth) navigate(ROUTES.auth.login.page);
+		navigate(ROUTES.profile.page);
 	};
 
 	return { isOpenCart, setIsOpenCart, handleProfile };

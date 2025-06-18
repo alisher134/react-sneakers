@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { ROUTES } from '@/constants/routes';
 
 import { MainLayout } from '@/components/layouts/MainLayout';
+import { AuthRoute } from '@/components/ui/AuthRoute';
 import { UnAuthRoute } from '@/components/ui/UnAuthRoute';
 
 import HomePage from '@/pages/Home';
@@ -15,6 +16,15 @@ export const AppRouter: React.FC = () => {
 			<Routes>
 				<Route element={<MainLayout />}>
 					<Route index element={<HomePage />} />
+					<Route path={ROUTES.favorites.route} element={<>Favorites</>} />
+					<Route
+						path={ROUTES.profile.route}
+						element={
+							<AuthRoute>
+								<>Profile</>
+							</AuthRoute>
+						}
+					/>
 					<Route
 						path={ROUTES.auth.login.route}
 						element={

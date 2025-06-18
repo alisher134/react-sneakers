@@ -1,0 +1,15 @@
+.form-field {
+	&__label {
+		display: inline-block;
+		width: 100%;
+		cursor: pointer;
+		font-size: 16px;
+		line-height: 118.8%;
+		color: #737373;
+		margin: 0 0 9px;
+	}
+
+	&__input {
+		margin-bottom: 20px;
+	}
+}

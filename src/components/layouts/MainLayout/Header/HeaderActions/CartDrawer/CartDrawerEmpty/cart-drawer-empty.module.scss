@@ -1,29 +1,30 @@
 @use '@/styles/variables' as *;
 
 .cart-drawer__empty {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  min-height: calc(100vh - 60px);
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	min-height: calc(100vh - 60px);
 
-  &-image {
-    margin-bottom: 20px;
-  }
+	&-image {
+		margin-bottom: 20px;
+	}
 
-  &-title {
-    margin-bottom: 10px;
-    font-size: 22px;
-    font-weight: 600;
-  }
+	&-title {
+		margin-bottom: 10px;
+		font-size: 22px;
+		font-weight: 600;
+	}
 
-  &-text {
-    margin-bottom: 40px;
-    color: $gray-text;
-  }
+	&-text {
+		margin-bottom: 40px;
+		color: $gray-text;
+		text-align: center;
+	}
 
-  &-title,
-  &-text {
-    font-family: $primary-font;
-  }
+	&-title,
+	&-text {
+		font-family: $primary-font;
+	}
 }

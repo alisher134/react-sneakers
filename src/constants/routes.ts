@@ -7,6 +7,10 @@ export const ROUTES = {
 		route: 'favorites',
 		page: '/favorites',
 	},
+	profile: {
+		route: 'profile',
+		page: '/profile',
+	},
 	auth: {
 		login: {
 			route: 'login',

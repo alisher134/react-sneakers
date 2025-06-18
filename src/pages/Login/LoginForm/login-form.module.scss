@@ -1,49 +1,49 @@
 @use '@/styles/variables' as *;
 
 .login-form {
-  &__label {
-    display: inline-block;
-    width: 100%;
-    cursor: pointer;
-    font-size: 16px;
-    line-height: 118.8%;
-    color: #737373;
-    margin: 0 0 9px;
-  }
+	&__label {
+		display: inline-block;
+		width: 100%;
+		cursor: pointer;
+		font-size: 16px;
+		line-height: 118.8%;
+		color: #737373;
+		margin: 0 0 9px;
+	}
 
-  &__input {
-    margin-bottom: 20px;
-  }
+	&__input {
+		margin-bottom: 20px;
+	}
 
-  &__forgot-password {
-    text-decoration: none;
-    border-bottom: 1px solid #000;
-    text-align: left;
-    font-size: 14px;
-    color: $black;
-  }
+	&__forgot-password {
+		text-decoration: none;
+		border-bottom: 1px solid #000;
+		text-align: left;
+		font-size: 14px;
+		color: $black;
+	}
 
-  &__actions {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-  }
+	&__actions {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-top: 20px;
+	}
 
-  &__line {
-    width: 100%;
-    border-bottom: 2px solid $gray-border;
-    padding-top: 40px;
-    margin-bottom: 40px;
-  }
+	&__line {
+		width: 100%;
+		border-bottom: 2px solid $gray-border;
+		padding-top: 40px;
+		margin-bottom: 40px;
+	}
 
-  &__register {
-    &-title {
-      text-align: center;
-      text-transform: uppercase;
-      font-size: 32px;
-      font-weight: 500;
-      padding-bottom: 15px;
-    }
-  }
+	&__register {
+		&-title {
+			text-align: center;
+			text-transform: uppercase;
+			font-size: 32px;
+			font-weight: 500;
+			padding-bottom: 15px;
+		}
+	}
 }

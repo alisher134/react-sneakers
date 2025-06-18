@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { ROUTES } from '@/constants/routes';
 
 import { Button } from '@/components/ui/Button';
-import { Input } from '@/components/ui/Input';
+import { FormField } from '@/components/ui/FormField';
 import { PasswordInput } from '@/components/ui/PasswordInput';
 
 import styles from './login-form.module.scss';
@@ -28,15 +28,12 @@ export const LoginForm: React.FC = () => {
 
 	return (
 		<form onSubmit={handleSubmit(handleFormSubmit)} className={styles['login-form']}>
-			<label htmlFor="email" className={styles['login-form__label']}>
-				Введите ваш e-mail
-			</label>
-			<Input
-				{...registerInput('email')}
+			<FormField
+				registerInput={registerInput('email')}
 				id="email"
 				type="email"
+				label="Введите ваш e-mail"
 				error={errors.email}
-				className={styles['login-form__input']}
 			/>
 
 			<label htmlFor="password" className={styles['login-form__label']}>

@@ -4,7 +4,7 @@ import { type SubmitHandler, useForm } from 'react-hook-form';
 import { ROUTES } from '@/constants/routes';
 
 import { Button } from '@/components/ui/Button';
-import { Input } from '@/components/ui/Input';
+import { FormField } from '@/components/ui/FormField';
 import { PasswordInput } from '@/components/ui/PasswordInput';
 
 import styles from './register-from.module.scss';
@@ -27,34 +27,28 @@ export const RegisterForm: React.FC = () => {
 
 	return (
 		<form onSubmit={handleSubmit(handleFormSubmit)} className={styles['register-form']}>
-			<label htmlFor="email" className={styles['register-form__label']}>
-				Введите ваш e-mail
-			</label>
-			<Input
-				{...registerInput('email')}
+			<FormField
+				registerInput={registerInput('email')}
 				id="email"
+				type="email"
+				label="Введите ваш e-mail"
 				error={errors.email}
-				className={styles['register-form__input']}
 			/>
 
-			<label htmlFor="firstName" className={styles['register-form__label']}>
-				Введите ваш имя
-			</label>
-			<Input
-				{...registerInput('firstName')}
+			<FormField
+				registerInput={registerInput('firstName')}
 				id="firstName"
+				type="text"
+				label="Введите ваш имя"
 				error={errors.firstName}
-				className={styles['register-form__input']}
 			/>
 
-			<label htmlFor="lastName" className={styles['register-form__label']}>
-				Введите ваш фамилия
-			</label>
-			<Input
-				{...registerInput('lastName')}
+			<FormField
+				registerInput={registerInput('lastName')}
 				id="lastName"
+				type="text"
+				label="Введите ваш фамилия"
 				error={errors.lastName}
-				className={styles['register-form__input']}
 			/>
 
 			<label htmlFor="password" className={styles['register-form__label']}>
@@ -72,7 +66,9 @@ export const RegisterForm: React.FC = () => {
 					Регистрация
 				</Button>
 			</div>
+
 			<div className={styles['register-form__line']} />
+
 			<div className={styles['register-form__register']}>
 				<h3 className={styles['register-form__login-title']}>Есть аккаунт?</h3>
 
